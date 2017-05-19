@@ -32,6 +32,12 @@ Comando para a realização do deploy do projeto
 
 * [Maven](https://maven.apache.org/) - Gerenciador de Dependências
 
+## Estilo de Codificação
+
+Os protótipos de interface serão construídos utilizando o padrão 
+
+* **Material Design** - (https://material.io/guidelines/)
+
 ## Contribuições
 
 To Do
