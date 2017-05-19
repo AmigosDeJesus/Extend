@@ -12,12 +12,6 @@ Através do site, o usuário poderá cadastrar sensores e o site devolverá um l
 
 Conexão com a internet
 
-## Instalação
-
-Comando para criação do projeto
-
-`mvn archetype:generate -DgroupId=com.github.AmigosdeJesus -DartifactId=extend -DarchetypeArtifactId=maven-archetype-webapp`
-
 ## Execução dos Testes
 
 To Do
