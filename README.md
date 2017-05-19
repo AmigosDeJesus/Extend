@@ -4,9 +4,9 @@
 O escopo do projeto é o de um Hub para sensores.
 Através do site, o usuário poderá cadastrar sensores e o site devolverá um link para que os sensores se comuniquem, apresentando de forma facilitada o que eles tem a exibir.
 
-## Obtendo o projeto
+## Obtendo o Projeto
 
-`git clone https://github.com/AmigosDeJesus/extend`
+`git clone https://github.com/AmigosDeJesus/Extend`
 
 ## Pré-Requisitos
 
