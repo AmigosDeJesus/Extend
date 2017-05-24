@@ -89,7 +89,7 @@ nav a{
 </head>
 
 <body>
-<header><center><h2>Wire Frame</h2></center></header>
+<header><center><h2><strong>Wire Frame</strong></h2></center></header>
 <input type="checkbox" id="check">
 <label id="icone" for="check"><img src="img/icone.png"></label>
 
@@ -99,12 +99,39 @@ nav a{
 
 <nav>
     <a href="index.jsp"><div class="link"><span class="glyphicon">&#xe091;</span> Voltar</div></a>
-    <a href=""><div class="link"><span class="glyphicon">&#xe092;</span> Logoff</div></a>
+    <a href="logoff.jsp"><div class="link"><span class="glyphicon">&#xe092;</span> Logoff</div></a>
 </nav>
 
-</div><br><br>
+</div>
+<br><br>
+        <div class="modal-dialog" style="margin-bottom:0">
+            <div class="modal-content">
+                <div class="panel-heading">
+                    <center><h2><kbd>New Sensor</kbd></h2></center>
+                </div>
+                <div class="panel-body">
+                    <form name="formulario">
+			<div class="form-group">
+                                <label for="type">Sensor Type:</label>
+                                <select class="form-control" id="type">
+                              		<option>Temperarture</option>
+                              		<option>Alarm</option>
+			      		<option>Electricity</option>
+			      		<option>***</option>
+                            	</select>
+                        </div>
+			
+			<center><img src="img/grafico.png" height="170" width="170"></center>
+                            <div class="form-group">
+                                <label for="descripition">Descripition:</label>
+					<textarea class="form-control" rows="4" id="descripition"></textarea>
+                            </div>
 
-<center><h2><kbd>Novo Sensor</kbd></h2></center>
-
+                            <center><button class="btn btn-sm btn-success" type="button" onclick="">Bounce</a></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -98,14 +98,14 @@ nav a{
 <div class="barra">
 
 <nav>
-    <a href="cadastro.jsp"><div class="link"><span class="glyphicon">&#x2b;</span> Add</div></a>
+    <a href="index.jsp"><div class="link"><span class="glyphicon">&#xe091;</span> Voltar</div></a>
     <a href="logoff.jsp"><div class="link"><span class="glyphicon">&#xe092;</span> Logoff</div></a>
 </nav>
 
 </div>
 <br><br><br>
 
-<center><h2><kbd>Sensores</kbd></h2></center>
+<center><h2><kbd>Logoff</kbd></h2></center>
 
 </body>
 </html>
