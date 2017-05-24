@@ -10,12 +10,22 @@
  padding:0;
 }
 
+header{
+ width: 100%;
+ height: 60px;
+ top: 0;
+ left: 0;
+ background-color: #777;
+ position: fixed;
+}
+
 body{
  background-color:#f9f9f9;
 }
 
 #check{
  display:none;
+ text-decoration:Extend;
 }
 
 #icone{
@@ -79,9 +89,11 @@ nav a{
 </head>
 
 <body>
-
+<header><center><h2>Wire Frame</h2></center></header>
 <input type="checkbox" id="check">
-<label id="icone" for="check"> <img src="img/icone.png"></label>
+<label id="icone" for="check"><img src="img/icone.png"></label>
+
+<div class="bg"></div>
 
 <div class="barra">
 
@@ -90,7 +102,9 @@ nav a{
     <a href=""><div class="link"><span class="glyphicon">&#xe092;</span> Logoff</div></a>
 </nav>
 
-</div>
+</div><br><br>
+
+<center><h2><kbd>Wire Frame</kbd></h2></center>
 
 </body>
 </html>
