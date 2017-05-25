@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/AmigosDeJesus/extend.svg?branch=master)](https://travis-ci.org/AmigosDeJesus/extend)
+[![Build Status](https://travis-ci.org/AmigosDeJesus/Extend.svg?branch=master)](https://travis-ci.org/AmigosDeJesus/Extend)
 # Extend
 
 O escopo do projeto é o de um Hub para sensores.
