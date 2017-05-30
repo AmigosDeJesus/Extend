@@ -73,7 +73,7 @@ nav a{
 #check:checked ~ .barra{
  transform:translateX(300px);
 }
- 
+
 #check:checked ~ .barra nav a .link{
  opacity:1;
  margin-top:0;
@@ -85,6 +85,7 @@ nav a{
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="logoff.css">
 
 </head>
 
@@ -99,13 +100,51 @@ nav a{
 
 <nav>
     <a href="index.jsp"><div class="link"><span class="glyphicon">&#xe091;</span> Voltar</div></a>
-    <a href="logoff.jsp"><div class="link"><span class="glyphicon">&#xe092;</span> Logoff</div></a>
 </nav>
 
 </div>
-<br><br><br>
+<br><br><br><br><br><br>
 
-<center><h2><kbd>Logoff</kbd></h2></center>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <form>
+          <h1 class="title">Login</h1>
+          <br/>
+          <div class="form-group">
+            <input type="email" class="form-control" id="login-email" placeholder="email@domain.com"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="login-pwd" placeholder="******"/>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-2">
+        <div class="login-provider-container">
+          <button><img src="img/fb_icon_transparent.png"/></button>
+          <button><img src="img/tw_icon_transparent.png"/></button>
+          <button><img src="img/gp_icon_transparent.png"/></button>
+        </div>
+        <br/><br/><br/>
+        <form action="index.jsp">
+          <button type="submit" class="btn btn-primary btn-block">EXTEND</button>
+        </form>
+      </div>
+      <div class="col-sm-5">
+        <form>
+          <h1 class="title">Register</h1>
+          <br/>
+          <div class="form-group">
+            <input type="email" class="form-control" id="register-email" placeholder="email@domain.com"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="register-pwd" placeholder="******"/>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+
 
 </body>
 </html>
