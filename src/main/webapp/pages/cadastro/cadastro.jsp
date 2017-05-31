@@ -89,7 +89,7 @@ nav a{
 
 <nav>
     <a href="index.jsp"><div class="link"><span class="glyphicon">&#xe091;</span> Voltar</div></a>
-    <a href="logoff.jsp"><div class="link"><span class="glyphicon">&#xe092;</span> Logoff</div></a>
+    <a href="logoff.jsp"><div class="link"><span class="glyphicon"> </span> Logoff</div></a>
 </nav>
 
 </div>
