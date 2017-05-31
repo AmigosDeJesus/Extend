@@ -5,7 +5,7 @@
   </head>
     <link rel="stylesheet" href="login.css">
   <body>
-    <jsp:include page = "../../partials/header/header.jsp" />
+    <jsp:include page="../../partials/header/header.jsp"/>
     <br/><br/><br/>
     <div class="container">
       <div class="row">
