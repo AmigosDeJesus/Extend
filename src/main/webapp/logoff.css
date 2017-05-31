@@ -1,0 +1,13 @@
+h1.title{
+  text-align: center;
+
+}
+div.login-provider-container{
+  margin-top: 16px;
+}
+div.login-provider-container button{
+  display: block;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
