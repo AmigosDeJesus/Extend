@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Login</title>
-  </head>
     <link rel="stylesheet" href="login.css">
+  </head>
+
   <body>
     <jsp:include page="../../partials/header/header.jsp"/>
     <br/><br/><br/>

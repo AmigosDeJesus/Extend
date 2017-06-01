@@ -2,9 +2,11 @@
 <html>
   <head>
     <title>Extend</title>
+    <link rel="stylesheet" href="home.css">
   </head>
   <body>
   <jsp:include page="../../partials/header/header.jsp"/>
+
   <div class="modal-dialog" style="margin-bottom:0">
     <div class="container-fluid">
       <div class="row">
