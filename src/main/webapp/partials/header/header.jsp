@@ -25,7 +25,7 @@
     </a>
     <a href="/extend/pages/cadastro/cadastro.jsp">
       <div class="link">
-        <span class="glyphicon">&#xe092;</span>
+        <span class="glyphicon"></span>
         Logoff
       </div>
     </a>
