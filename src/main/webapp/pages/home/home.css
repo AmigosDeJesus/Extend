@@ -1,0 +1,7 @@
+table, th, td {
+    border: 1px solid gray;
+}
+
+table#t01 th#t01 {
+    background-color: #CCCCCC;
+}

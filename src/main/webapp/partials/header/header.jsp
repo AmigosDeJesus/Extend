@@ -23,7 +23,7 @@
         Add
       </div>
     </a>
-    <a href="/extend/pages/cadastro/cadastro.jsp">
+    <a href="/extend/pages/login/login.jsp">
       <div class="link">
         <span class="glyphicon"></span>
         Logoff
