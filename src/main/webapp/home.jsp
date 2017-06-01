@@ -73,7 +73,7 @@ nav a{
 #check:checked ~ .barra{
  transform:translateX(300px);
 }
- 
+
 #check:checked ~ .barra nav a .link{
  opacity:1;
  margin-top:0;
