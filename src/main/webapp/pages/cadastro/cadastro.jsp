@@ -111,7 +111,7 @@ nav a{
                                 </select>
                         </div>
            
-            <center><img src="img/grafico.png" height="170" width="170"></center>
+            <center><img src="./../../img/grafico.png" height="170" width="170"></center>
                             <div class="form-group">
                                 <label for="description">Description:</label>
                     <textarea class="form-control" rows="4" id="description"></textarea>
