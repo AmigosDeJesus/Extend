@@ -23,12 +23,12 @@
         </div>
         <div class="col-sm-2">
           <div class="login-provider-container">
-            <button><img src="./../../img/fb_icon_transparent.png"/></button>
-            <button><img src="./../../img/tw_icon_transparent.png"/></button>
-            <button><img src="./../../img/gp_icon_transparent.png"/></button>
+            <form action="./../home/home.jsp"><button><img src="./../../img/fb_icon_transparent.png"/></button></form>
+            <form action="./../home/home.jsp"><button><img src="./../../img/tw_icon_transparent.png"/></button></form>
+            <form action="./../home/home.jsp"><button><img src="./../../img/gp_icon_transparent.png"/></button></form>
           </div>
           <br/><br/><br/>
-          <form action="./../../index.jsp">
+          <form action="./../home/home.jsp">
             <button type="submit" class="btn btn-primary btn-block">EXTEND</button>
           </form>
         </div>
