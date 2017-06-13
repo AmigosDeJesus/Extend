@@ -1,8 +1,8 @@
 <!DOCTYPE html><!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"/>
 <title>Adicionar Sensor</title>
+<link rel="stylesheet" href="cadastro.css"/>
 
 </head>
 
@@ -10,8 +10,8 @@
 
 <jsp:include page="../../partials/header/header.jsp"/>
 
-<br><br>
-        <div class="modal-dialog" style="margin-bottom:0">
+<br>
+<div class="modal-dialog" style="margin-bottom:0">
             <div class="modal-content">
                 <div class="panel-heading">
                     <center><h2><kbd>New Sensor</kbd></h2></center>
@@ -40,5 +40,6 @@
         </div>
     </div>
 </div>
+<br>
 </body>
 </html>
