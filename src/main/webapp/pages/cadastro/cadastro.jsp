@@ -10,6 +10,8 @@
 
     <jsp:include page="../../partials/header/header.jsp"/>
 
+
+    <br><br>
     <div class="modal-dialog" style="margin-bottom:0">
         <div class="modal-content">
             <div class="panel-heading">
@@ -34,7 +36,6 @@
                 </div>
 
                 <center><a href="./../home/home.jsp" class="btn btn-sm btn-success" type="button">OK</a></center>
-          </form>
             </form>
         </div>
     </div>
