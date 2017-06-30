@@ -10,6 +10,7 @@
 
     <jsp:include page="../../partials/header/header.jsp"/>
 
+
     <br><br>
     <div class="modal-dialog" style="margin-bottom:0">
         <div class="modal-content">
@@ -18,7 +19,9 @@
             </div>
             <div class="panel-body">
                 <form name="formulario">
+
                     <div class="form-group">
+						
                         <label for="type">Sensor Type:</label>
                         <select class="form-control" id="type">
                           <option>Temperature</option>
@@ -34,10 +37,16 @@
                     <textarea class="form-control" rows="4" id="description"></textarea>
                 </div>
 
-                <center><button class="btn btn-sm btn-success" type="button" onclick="">OK</button></center>
+	  <div class="form-group">
+                         <label for="calculo">Sensor Number:</label>
+                         <input type="text" class="form-control" placeholder="ac12f5h789olf56dhdlnchfkldofhgjtutikgfkf" name="id" disabled>
+                </div>
+
+                <center><a href="./../home/home.jsp" class="btn btn-sm btn-success" type="button">OK</a></center>
             </form>
         </div>
     </div>
 </div>
+<br><br>
 </body>
 </html>
