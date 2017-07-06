@@ -10,6 +10,7 @@
 
     <jsp:include page="../../partials/header/header.jsp"/>
 
+
     <br><br>
     <div class="modal-dialog" style="margin-bottom:0">
         <div class="modal-content">
@@ -34,10 +35,11 @@
                     <textarea class="form-control" rows="4" id="description"></textarea>
                 </div>
 
-                <center><button class="btn btn-sm btn-success" type="button" onclick="">OK</button></center>
+                <center><a href="./../home/home.jsp" class="btn btn-sm btn-success" type="button">OK</a></center>
             </form>
         </div>
     </div>
 </div>
+<br><br>
 </body>
 </html>
