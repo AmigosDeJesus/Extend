@@ -1,17 +1,36 @@
-function MenuHamburguer (page) {
+function menuHamburguer() {
 
-    switch (page) {
+    var x = document.title
 
-        <a href="/extend/pages/cadastro/cadastro.jsp">
+    switch (x) {
+
+        case "Adicionar Sensor":
+        
+            <a href="/extend/pages/cadastro/cadastro.jsp">
             <div class="link">
             <span class="glyphicon">&#x2b;</span>
             Add
             </div>
-        </a>
-        <a href="/extend/pages/login/login.jsp">
+            </a>
+            break;
+
+        case "Extend":
+
+            <a href="/extend/pages/login/login.jsp">
             <div class="link">
             <span class="glyphicon"></span>
             Logoff
             </div>
-        </a>
+            </a>
+            break;
+
+        case "Login":
+
+            <a href="/extend/pages/login/login.jsp">
+            <div class="link">
+            <span class="glyphicon"></span>
+            Logoff
+            </div>
+            </a>
     }
+}

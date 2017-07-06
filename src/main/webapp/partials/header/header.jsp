@@ -17,7 +17,7 @@
 <div class="bg"></div>
 <div class="barra">
   <nav>
-    <script src="header.js"></script>    
+    <script src="/extend/partials/header/header.js"></script>
   </nav>
 </div>
 <br/><br/><br/>
