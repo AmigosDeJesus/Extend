@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Adicionar Sensor</title>
-    
+   
     <script type="text/javascript">
 		// Armazena o nó da imagem.
 		var imageSensor;
@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
     <jsp:include page="../../partials/header/header.jsp"/>
 
     <br><br>
@@ -37,16 +36,16 @@
 						
                         <label for="type">Sensor Type:</label>
                         <select onChange="javascript:alteraSensor();" class="form-control" id="type">
+                          <option value="../../img/graficos/img4.jpg">***</option>
                           <option value="../../img/graficos/img1.jpg">Temperature</option>
                           <option value="../../img/graficos/img2.jpg">Alarm</option>
                           <option value="../../img/graficos/img3.jpg">Electricity</option>
-                          <option>***</option>
                       </select>
                   </div>
 
                   <center>
                   	<!--img src="./../../img/grafico.png" height="170" width="170" -->
-                    <img src="imgSensor/img1.jpg" width="507" height="448" id="id-da-imagem" />
+                    <img src="../../img/graficos/img4.jpg" width="300" height="300" id="id-da-imagem" />
                   </center>
                   
                   <div class="form-group">
