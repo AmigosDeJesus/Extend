@@ -78,7 +78,9 @@
                                         <div class="panel-body">
                                           <form name="formulario">
                                             <center>
-                                              <img src="./../../img/add.png" height="100" width="100"></form>
+                                              <a href="/extend/pages/cadastro/cadastro.jsp">
+                                                <img src="./../../img/add.png" height="100" width="100"></a>
+                                              </form>
                                             </div>
                                           </div>
                                         </div>

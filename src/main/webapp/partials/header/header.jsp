@@ -17,18 +17,7 @@
 <div class="bg"></div>
 <div class="barra">
   <nav>
-    <a href="/extend/pages/cadastro/cadastro.jsp">
-      <div class="link">
-        <span class="glyphicon">&#x2b;</span>
-        Add
-      </div>
-    </a>
-    <a href="/extend/pages/login/login.jsp">
-      <div class="link">
-        <span class="glyphicon"></span>
-        Logoff
-      </div>
-    </a>
+    <script src="/extend/partials/header/header.js"></script>
   </nav>
 </div>
 <br/><br/><br/>
