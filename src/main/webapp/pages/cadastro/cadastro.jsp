@@ -1,15 +1,27 @@
-<!DOCTYPE html><!DOCTYPE html>
+﻿<!DOCTYPE html><!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8"/>
     <title>Adicionar Sensor</title>
+   
+    <script type="text/javascript">
+		// Armazena o nó da imagem.
+		var imageSensor;
+		var caminhoImagemSensor;
+		
+    	function alteraSensor(){
+			imageSensor = document.getElementById('id-da-imagem');
+			caminhoImagemSensor = document.getElementById("type").value;
+			
+			// Altera o source da imagem armazenada
+			imageSensor.src = caminhoImagemSensor;
+		}
+    </script>
 
 </head>
 
 <body>
-
     <jsp:include page="../../partials/header/header.jsp"/>
-
 
     <br><br>
     <div class="modal-dialog" style="margin-bottom:0">
@@ -23,21 +35,25 @@
                     <div class="form-group">
 						
                         <label for="type">Sensor Type:</label>
-                        <select class="form-control" id="type">
-                          <option>Temperature</option>
-                          <option>Alarm</option>
-                          <option>Electricity</option>
-                          <option>***</option>
+                        <select onChange="javascript:alteraSensor();" class="form-control" id="type">
+                          <option value="../../img/graficos/img4.jpg">***</option>
+                          <option value="../../img/graficos/img1.jpg">Temperature</option>
+                          <option value="../../img/graficos/img2.jpg">Alarm</option>
+                          <option value="../../img/graficos/img3.jpg">Electricity</option>
                       </select>
                   </div>
 
-                  <center><img src="./../../img/grafico.png" height="170" width="170"></center>
+                  <center>
+                  	<!--img src="./../../img/grafico.png" height="170" width="170" -->
+                    <img src="../../img/graficos/img4.jpg" width="300" height="300" id="id-da-imagem" />
+                  </center>
+                  
                   <div class="form-group">
                     <label for="description">Description:</label>
                     <textarea class="form-control" rows="4" id="description"></textarea>
                 </div>
 
-	  <div class="form-group">
+	 <div class="form-group">
                          <label for="calculo">Sensor Number:</label>
                          <input type="text" class="form-control" placeholder="ac12f5h789olf56dhdlnchfkldofhgjtutikgfkf" name="id" disabled>
                 </div>
