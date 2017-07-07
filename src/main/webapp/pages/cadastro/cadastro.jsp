@@ -8,6 +8,9 @@
 
 <body>
 
+    <% int referenceNum = 1;
+    out.println("<a href='header.jsp?referenceNum="+referenceNum +"'>"+referenceNum +"</a>"); %>
+
     <jsp:include page="../../partials/header/header.jsp"/>
 
     <br><br>
