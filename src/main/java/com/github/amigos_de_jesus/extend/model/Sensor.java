@@ -19,7 +19,6 @@ public class Sensor implements Serializable {
      * @param type {@link #type}
      * @param representation {@link #representation}
      * @param description {@link #description}
-     * @param publicId  {@link #publicId}
      */
     public Sensor(
             Type type, 
@@ -28,12 +27,13 @@ public class Sensor implements Serializable {
         this.type = type;
         this.representation = representation;
         this.description = description;
-        try {
-            this.publicId = String.format("%064x", new java.math.BigInteger(1,
-                    MessageDigest.getInstance("SHA-256").digest()));
-        } catch (NoSuchAlgorithmException ex) {
-            throw new RuntimeException(ex);
-        }
+        this.publicId = "test";
+//        try {
+//            this.publicId = String.format("%064x", new java.math.BigInteger(1,
+//                    MessageDigest.getInstance("SHA-256").digest()));
+//        } catch (NoSuchAlgorithmException ex) {
+//            throw new RuntimeException(ex);
+//        }
     }
     
     /**
@@ -58,7 +58,6 @@ public class Sensor implements Serializable {
     /**
      * Type of sensor
      */
-    @Enumerated(EnumType.ORDINAL)
     private Type type;
 
     /**
@@ -72,7 +71,6 @@ public class Sensor implements Serializable {
     /**
      * Type of graph which will be used to display info
      */
-    @Enumerated(EnumType.ORDINAL)
     private GraphType representation;
     
     /**

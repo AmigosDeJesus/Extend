@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Mon Jul 10 03:07:57 BRT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015d-2b1c-8d47-000006744ee0 
+on database directory /home/eddyosos/Desktop/git/Extend/db with class loader WebappClassLoader
+  context: /extend
+  delegate: false
+  repositories:
+----------> Parent Classloader:
+ClassRealm[plugin>org.apache.tomcat.maven:tomcat7-maven-plugin:2.2, parent: java.net.URLClassLoader@4a574795]
+ 
+Loaded from file:/home/eddyosos/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-8u131-b11-0ubuntu1.16.04.2-b11
+user.dir=/home/eddyosos/Desktop/git/Extend
+os.name=Linux
+os.arch=amd64
+os.version=4.4.0-64-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

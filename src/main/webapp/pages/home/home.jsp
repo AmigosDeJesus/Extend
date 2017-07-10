@@ -1,90 +1,56 @@
 <!DOCTYPE html>
+<%@page import="java.util.List"%>
+<%@page import="com.github.amigos_de_jesus.extend.model.Sensor"%>
 <html>
-  <head>
+<head>
     <title>Extend</title>
     <link rel="stylesheet" href="home.css">
-  </head>
-  <body>
-  <jsp:include page="../../partials/header/header.jsp"/>
-
-  <div class="modal-dialog" style="margin-bottom:0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="modal-content">
-            <div class="panel-body">
-              <form name="formulario">
-                <div class="form-group">
-                  <center>
-                    <h3>
-                      <label for="type">Temperature</h3>
-                    </label>
-                  </div>
-                  <center>
-                    <img src="./../../img/thermometer.png" height="100" width="100"></form>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="modal-content">
-                  <div class="panel-body">
-                    <form name="formulario">
-                      <div class="form-group">
-                        <center>
-                          <h3>
-                            <label for="type">Alarm</h3>
-                          </label>
+</head>
+<body>
+    <jsp:include page="../../partials/header/header.jsp"/>
+    <br/><br/>
+        <div class="container-fluid">
+            <div class="row">
+                <%
+                    List<Sensor> sensores =
+                        (List<Sensor>) request.getAttribute("sensores");
+                    if(sensores != null) 
+                        for(Sensor sensor:sensores) {
+                %>
+                <div class="col-sm-4">
+                    <div class="modal-content">
+                        <div class="panel-body">
+                            <form name="formulario">
+                                <div class="form-group">
+                                    <center>
+                                        <h3><label><%= sensor.type().toString() %></label></h3>
+                                    </center>
+                                </div>
+                                <center>
+                                    <img src=<%= sensor.representation().toString() %>
+                                            height="100" width="100"/>
+                                </center>
+                            </form>
                         </div>
-                        <div>
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <table id="t01" height="100" width="100">
-                                <tr>
-                                  <th id="t01">
-                                    <center>Home</th>
-                                    <tr>
-                                      <th>
-                                        <center>Car</th>
-                                        <tr>
-                                          <th>
-                                            <center>Fire</th>
-                                          </table>
-                                        </div>
-                                        <div class="col-sm-6">
-                                          <img src="./../../img/alarm.png" height="100" width="100"></div>
-                                        </div>
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-6">
-                                <div class="modal-content">
-                                  <div class="panel-body">
-                                    <form name="formulario">
-                                      <div class="form-group">
-                                        <center>
-                                          <h3>
-                                            <label for="type">Electricity</h3>
-                                          </label>
-                                        </div>
-                                        <center>
-                                          <img src="./../../img/electricity.png" height="100" width="100"></form>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                      <div class="modal-content">
-                                        <div class="panel-body">
-                                          <form name="formulario">
-                                            <center>
-                                              <img src="./../../img/add.png" height="100" width="100"></form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </body>
-                            </html>
+                    </div>
+                </div>
+                <% } %>
+
+                <div class="col-sm-4">
+                    <a href="../cadastro/cadastro.jsp">
+                        <div class="modal-content">
+                            <div class="panel-body">
+                                <form name="formulario">
+                                    <center>
+                                        <img src="./../../img/add.png" height="100" width="100">
+                                    </center>
+                                </form>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
