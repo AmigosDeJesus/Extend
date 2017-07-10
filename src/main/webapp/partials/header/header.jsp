@@ -11,10 +11,8 @@
       <strong>EXTEND</strong>
     </h2>
   </center>
-    <div>
-      <h1>Job Reference Number: <% out.println("referenceNum"); %></h1>
-    </div>
 </header>
+
 <input type="checkbox" id="check"/>
   <label id="icone" for="check">
     <img src="/extend/img/icone.png">

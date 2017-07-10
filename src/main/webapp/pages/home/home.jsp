@@ -6,7 +6,6 @@
   </head>
   <body>
 
-  <%int referenceNum = 2;%>
   <jsp:include page="../../partials/header/header.jsp"/>
 
   <div class="modal-dialog" style="margin-bottom:0">

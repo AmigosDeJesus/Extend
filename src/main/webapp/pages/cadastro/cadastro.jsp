@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Adicionar Sensor</title>
-
 </head>
 
 <body>
-
-    <% int referenceNum = 1;
-    out.println("<a href='header.jsp?referenceNum="+referenceNum +"'>"+referenceNum +"</a>"); %>
 
     <jsp:include page="../../partials/header/header.jsp"/>
 
