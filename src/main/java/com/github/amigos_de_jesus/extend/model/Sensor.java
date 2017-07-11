@@ -30,12 +30,12 @@ public class Sensor implements Serializable {
         this.representation = representation;
         this.description = description;
         this.publicId = "test";
-//        try {
-//            this.publicId = String.format("%064x", new java.math.BigInteger(1,
-//                    MessageDigest.getInstance("SHA-256").digest()));
-//        } catch (NoSuchAlgorithmException ex) {
-//            throw new RuntimeException(ex);
-//        }
+        try {
+            this.publicId = String.format("%064x", new java.math.BigInteger(1,
+                    MessageDigest.getInstance("SHA-256").digest()));
+        } catch (NoSuchAlgorithmException ex) {
+            throw new RuntimeException(ex);
+        }
     }
     
     /**

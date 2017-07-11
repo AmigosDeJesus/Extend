@@ -42,6 +42,8 @@ function alteraImagem() {
 
 // Função para enviar requisição
 function submit(){
+    var id = getParameterByName("id", window.location);
+    
     var type = 
             ["","TEMPERATURE", "ALARM", "ELETRICITY"]
             [document.getElementById("type").selectedIndex];
@@ -51,9 +53,22 @@ function submit(){
             [document.getElementById("graph").selectedIndex];
             
     var description = document.getElementById("description").value;
+
+    var op = id? "alterar" : "incluir";
     
-    window.location = "../home/home?op=incluir" +
+    window.location = "../home/home" +
+            "?op=" + op +
             "&type=" + type +
             "&gtype=" + gtype +
-            "&description=" + description;
+            "&description=" + description;  
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

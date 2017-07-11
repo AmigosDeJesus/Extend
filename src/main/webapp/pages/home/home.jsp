@@ -18,27 +18,29 @@
                         for(Sensor sensor:sensores) {
                 %>
                 <div class="col-sm-4">
-                    <div class="modal-content">
-                        <div class="panel-body">
-                            <form name="formulario">
-                                <div class="form-group">
+                    <a href="../cadastro/cadastro?id=<%= sensor.id() %>" >
+                        <div class="modal-content">
+                            <div class="panel-body">
+                                <form name="formulario">
+                                    <div class="form-group">
+                                        <center>
+                                            <h3><label><%= sensor.type().toString() %></label></h3>
+                                        </center>
+                                    </div>
                                     <center>
-                                        <h3><label><%= sensor.type().toString() %></label></h3>
+                                        <img src=<%= "../../img/" + 
+                                                sensor.representation().imgPath()%>
+                                                height="100" width="100"/>
                                     </center>
-                                </div>
-                                <center>
-                                    <img src=<%= "../../img/" + 
-                                            sensor.representation().imgPath()%>
-                                            height="100" width="100"/>
-                                </center>
-                            </form>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <% } %>
 
                 <div class="col-sm-4">
-                    <a href="../cadastro/cadastro.jsp">
+                    <a href="../cadastro/cadastro">
                         <div class="modal-content">
                             <div class="panel-body">
                                 <form name="formulario">

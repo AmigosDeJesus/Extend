@@ -57,4 +57,16 @@ public class SensorDAO {
         em.close();
         return result;
     }
+
+    /**
+     * Encontra um sensor
+     * @param id {@link Sensor#id}
+     * @return {@link Sensor}
+     */
+    public static Sensor visualizar(int id) {
+        EntityManager em = EMF.createEntityManager();
+        Sensor result = em.find(Sensor.class, id);
+        em.close();
+        return result;
+    }
 }

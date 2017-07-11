@@ -17,7 +17,7 @@
 <div class="bg"></div>
 <div class="barra">
   <nav>
-    <a href="/extend/pages/cadastro/cadastro.jsp">
+    <a href="/extend/pages/cadastro/cadastro">
       <div class="link">
         <span class="glyphicon">&#x2b;</span>
         Add
