@@ -10,7 +10,16 @@ package com.github.amigos_de_jesus.extend.model;
  * @author eddyosos
  */
 public enum Type {
-    TEMPERATURE, 
-    ALARM, 
-    ELETRICITY 
+    TEMPERATURE("Temperature"), 
+    ALARM("Alarm"), 
+    ELETRICITY("Eletricity"); 
+
+    private final String formated;
+    private Type(String formated){
+        this.formated = formated;
+    }
+    @Override    
+    public String toString() {
+        return formated;
+    }
 }

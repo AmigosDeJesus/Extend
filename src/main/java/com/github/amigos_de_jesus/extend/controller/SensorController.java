@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/pages/home/home.jsp")
+@WebServlet("/pages/home/home")
 public class SensorController extends HttpServlet {
 
     @Override
@@ -29,27 +29,28 @@ public class SensorController extends HttpServlet {
             String msg;
             
             String op = req.getParameter("op");
+            if(op == null) op = "";
             String description = req.getParameter("description");
             String publicId = req.getParameter("publicId");
             
             Integer id;
             try {
                 id = Integer.valueOf(req.getParameter("id"));
-            } catch(NumberFormatException ex){
+            } catch(IllegalArgumentException | NullPointerException ex){
                 id = null;
             }
             
             Type type;
             try { 
                 type = Type.valueOf(req.getParameter("type"));
-            } catch(IllegalArgumentException ex) {
+            } catch(IllegalArgumentException | NullPointerException ex) {
                 type = null;
             }
             
             GraphType graphType;
             try { 
                 graphType = GraphType.valueOf(req.getParameter("gtype"));
-            } catch(IllegalArgumentException ex) {
+            } catch(IllegalArgumentException | NullPointerException ex) {
                 graphType = null;
             }
 
@@ -76,6 +77,7 @@ public class SensorController extends HttpServlet {
             } catch (PersistenceException ex) {
                 msg = "Não foi possivel efetuar a operação";
             }
+            
             req.setAttribute("msg", msg);
             req.setAttribute("sensores", SensorDAO.listar());
 

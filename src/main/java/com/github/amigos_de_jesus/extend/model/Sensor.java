@@ -6,6 +6,8 @@ import java.security.NoSuchAlgorithmException;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -45,6 +47,7 @@ public class Sensor implements Serializable {
      * Unique private unchangeable identifier
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
     
     /**
@@ -58,6 +61,7 @@ public class Sensor implements Serializable {
     /**
      * Type of sensor
      */
+    @Enumerated(EnumType.STRING)
     private Type type;
 
     /**
@@ -71,6 +75,7 @@ public class Sensor implements Serializable {
     /**
      * Type of graph which will be used to display info
      */
+    @Enumerated(EnumType.STRING)
     private GraphType representation;
     
     /**

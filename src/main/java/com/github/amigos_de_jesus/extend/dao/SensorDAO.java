@@ -32,13 +32,14 @@ public class SensorDAO {
             GraphType representation,
             String description) {
 
+        EntityManager em = EMF.createEntityManager();
+        em.getTransaction().begin();
+
         Sensor entity = new Sensor(
                 type,
                 representation,
                 description);
 
-        EntityManager em = EMF.createEntityManager();
-        em.getTransaction().begin();
         em.persist(entity);
         em.getTransaction().commit();
         em.close();

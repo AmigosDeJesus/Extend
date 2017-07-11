@@ -52,7 +52,7 @@ function submit(){
             
     var description = document.getElementById("description").value;
     
-    window.location = "../home/home.jsp?op=incluir" +
+    window.location = "../home/home?op=incluir" +
             "&type=" + type +
             "&gtype=" + gtype +
             "&description=" + description;

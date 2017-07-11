@@ -27,7 +27,8 @@
                                     </center>
                                 </div>
                                 <center>
-                                    <img src=<%= sensor.representation().toString() %>
+                                    <img src=<%= "../../img/" + 
+                                            sensor.representation().imgPath()%>
                                             height="100" width="100"/>
                                 </center>
                             </form>
