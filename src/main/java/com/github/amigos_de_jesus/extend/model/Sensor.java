@@ -111,5 +111,26 @@ public class Sensor implements Serializable {
     public String publicId() {
         return publicId;
     }
-    
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public void setRepresentation(GraphType representation) {
+        this.representation = representation;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPublicId(String publicId) {
+        this.publicId = publicId;
+    }
+
+
 }

@@ -61,9 +61,11 @@ public class SensorController extends HttpServlet {
                         msg = "Inclusão realizada com sucesso.";
                         break;
                     case "alterar":
+                        SensorDAO.alterar(id, type, graphType, description, publicId);
                         msg = "Alteração realizada com sucesso.";
                         break;
                     case "excluir":
+                        SensorDAO.excluir(id);
                         msg = "Exclusão realizada com sucesso.";
                         break;
                     case "":

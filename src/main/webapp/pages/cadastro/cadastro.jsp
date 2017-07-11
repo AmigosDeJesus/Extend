@@ -84,6 +84,10 @@
                     </div>
                     <center>
                         <a onClick="submit()" class="btn btn-sm btn-success" type="button">OK</a>
+                        
+                        <% if(sensor!=null) { %>
+                        <a onClick="excluir()" class="btn btn-sm btn-danger" type="button">EXCLUIR</a>
+                        <% } %>
                     </center>
                 </form>
             </div>

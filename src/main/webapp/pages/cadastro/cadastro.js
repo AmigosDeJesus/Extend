@@ -56,11 +56,14 @@ function submit(){
 
     var op = id? "alterar" : "incluir";
     
-    window.location = "../home/home" +
+    var newlocation = "../home/home" +
             "?op=" + op +
             "&type=" + type +
             "&gtype=" + gtype +
-            "&description=" + description;  
+            "&description=" + description;
+    if(id) newlocation += "&id="+ id;
+    
+    window.location = newlocation;  
 }
 
 function getParameterByName(name, url) {
@@ -72,3 +75,10 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+function excluir(){
+    window.location = "../home/home" +
+            "?op=" + "excluir" +
+            "&id=" + getParameterByName("id", window.location);
+}       
+        

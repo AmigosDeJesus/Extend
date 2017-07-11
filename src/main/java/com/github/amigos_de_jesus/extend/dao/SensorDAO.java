@@ -12,6 +12,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceException;
 import javax.persistence.TypedQuery;
 
 /**
@@ -68,5 +69,26 @@ public class SensorDAO {
         Sensor result = em.find(Sensor.class, id);
         em.close();
         return result;
+    }
+
+    public static void alterar(Integer id, Type type, GraphType graphType, String description, String publicId) {
+        EntityManager em = EMF.createEntityManager();
+        em.getTransaction().begin();
+        Sensor sensor = em.find(Sensor.class, id);
+        if(type != null)sensor.setType(type);
+        if(graphType != null)sensor.setRepresentation(graphType);
+        if(description != null)sensor.setDescription(description);
+        if(publicId != null)sensor.setPublicId(publicId);
+        em.getTransaction().commit();
+        em.close();
+    }
+
+    public static void excluir(Integer id) {
+        EntityManager em = EMF.createEntityManager();
+        em.getTransaction().begin();
+        Sensor sensor = em.find(Sensor.class, id);
+        em.remove(sensor);
+        em.getTransaction().commit();
+        em.close();
     }
 }
