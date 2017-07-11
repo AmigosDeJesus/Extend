@@ -6,6 +6,7 @@
   </head>
 
   <body>
+
     <jsp:include page="../../partials/header/header.jsp"/>
     <br/><br/><br/>
     <div class="container">
