@@ -99,7 +99,7 @@
                     </div>
 
 					<center>
-                    	<a href="./../home/home.jsp" class="btn btn-sm btn-success" type="button">OK</a>
+                    	<a href="./../home/home.jsp?" class="btn btn-sm btn-success" type="button">OK</a>
                     </center>
 				</form>
 			</div>
