@@ -18,21 +18,21 @@
 <div class="barra">
   <nav>
     <script>
-      if(document.location.href == "http://localhost:9090/extend/pages/home/home") {
+      if(document.location.href.toString().indexOf("/home/home") !== -1) {
         document.write("<a href=\"\/extend\/pages\/cadastro\/cadastro\">");
         document.write(" <div class=\"link\">");
         document.write("  <span class=\"glyphicon\">&#x2b;<\/span>");
         document.write("    Add");
         document.write(" <\/div>");
         document.write("<\/a>");
-        document.write("<a href=\"\/extend\/pages\/login\/login\">");
+        document.write("<a href=\"\/extend\/pages\/login\/login.jsp\">");
         document.write(" <div class=\"link\">");
         document.write("   <span class=\"glyphicon\"><\/span>");
         document.write("    Logoff");
         document.write(" <\/div>");
         document.write("<\/a>");
       }
-      else if(document.location.href == "http://localhost:9090/extend/pages/cadastro/cadastro") {
+      else if(document.location.href.toString().indexOf("/cadastro/cadastro") !== -1) {
         document.write("<a href=\"\/extend\/pages\/home\/home\">");
         document.write(" <div class=\"link\">");
         document.write("  <span class=\"glyphicon\"><\/span>");
