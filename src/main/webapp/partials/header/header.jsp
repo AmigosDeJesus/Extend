@@ -17,18 +17,36 @@
 <div class="bg"></div>
 <div class="barra">
   <nav>
-    <a href="/extend/pages/cadastro/cadastro.jsp">
-      <div class="link">
-        <span class="glyphicon">&#x2b;</span>
-        Add
-      </div>
-    </a>
-    <a href="/extend/pages/login/login.jsp">
-      <div class="link">
-        <span class="glyphicon"></span>
-        Logoff
-      </div>
-    </a>
+    <script>
+      if(document.location.href == "http://localhost:9090/extend/pages/home/home.jsp?") {
+        document.write("<a href=\"\/extend\/pages\/cadastro\/cadastro.jsp\">");
+        document.write(" <div class=\"link\">");
+        document.write("  <span class=\"glyphicon\">&#x2b;<\/span>");
+        document.write("    Add");
+        document.write(" <\/div>");
+        document.write("<\/a>");
+        document.write("<a href=\"\/extend\/pages\/login\/login.jsp\">");
+        document.write(" <div class=\"link\">");
+        document.write("   <span class=\"glyphicon\"><\/span>");
+        document.write("    Logoff");
+        document.write(" <\/div>");
+        document.write("<\/a>");
+      }
+      else if(document.location.href == "http://localhost:9090/extend/pages/cadastro/cadastro.jsp") {
+        document.write("<a href=\"\/extend\/pages\/home\/home.jsp?\">");
+        document.write(" <div class=\"link\">");
+        document.write("  <span class=\"glyphicon\"><\/span>");
+        document.write("    Home");
+        document.write(" <\/div>");
+        document.write("<\/a>");
+        document.write("<a href=\"\/extend\/pages\/login\/login.jsp\">");
+        document.write(" <div class=\"link\">");
+        document.write("   <span class=\"glyphicon\"><\/span>");
+        document.write("    Logoff");
+        document.write(" <\/div>");
+        document.write("<\/a>");
+      }
+    </script>
   </nav>
 </div>
 <br/><br/><br/>
