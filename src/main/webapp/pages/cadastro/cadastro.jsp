@@ -45,7 +45,7 @@
                     <div class="form-group">
                         <label for="graph">Graph Type:</label>
                         <select onChange="alteraImagem();" class="form-control" id="graph">
-                            <option value="../../img/graficos/img4.jpg">Todos os gráficos</option>
+                            <option value="../../img/graficos/img4.jpg">Todos os grï¿½ficos</option>
                             <option <%= 
                                 (sensor!=null && sensor.representation().equals(GraphType.BARRAS))? 
                                         "selected=\"selected\"" : ""
