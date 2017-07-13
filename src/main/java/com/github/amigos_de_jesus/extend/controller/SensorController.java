@@ -26,7 +26,8 @@ public class SensorController extends HttpServlet {
             throws ServletException, IOException {
         
         try {
-            String msg;
+            String msg = null;
+            MensageType msgType = null;
             
             String op = req.getParameter("op");
             if(op == null) op = "";
@@ -69,23 +70,43 @@ public class SensorController extends HttpServlet {
                         msg = "Exclusão realizada com sucesso.";
                         break;
                     case "":
-                        msg = "";
                         break;
                     default:
                         throw new IllegalArgumentException("Operação \"" + op + "\" não suportada.");
                 }
+                msgType = MensageType.SUCESS;
             } catch (IllegalArgumentException ex) {
                 msg = ex.getMessage();
+                msgType = MensageType.DANGER;
             } catch (PersistenceException ex) {
                 msg = "Não foi possivel efetuar a operação";
+                msgType = MensageType.DANGER;
             }
             
-            req.setAttribute("msg", msg);
+            if(msg != null) {
+                req.setAttribute("msg", msg);
+                req.setAttribute("msg_type", msgType);
+            }
             req.setAttribute("sensores", SensorDAO.listar());
 
             req.getRequestDispatcher("home.jsp").forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace(resp.getWriter());
+        }
+    }
+    
+    public enum MensageType{
+        SUCESS("success"), 
+        WARNING("warning"), 
+        INFO("info"), 
+        DANGER("danger");
+        
+        private final String REPRESENTATION;
+        private MensageType(final String representation){
+            REPRESENTATION = representation;
+        }
+        public String representation(){
+            return REPRESENTATION;
         }
     }
 }

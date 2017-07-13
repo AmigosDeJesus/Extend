@@ -1,6 +1,7 @@
 package com.github.amigos_de_jesus.extend.model;
 
 import java.io.Serializable;
+import java.security.InvalidParameterException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import javax.persistence.Entity;
@@ -26,6 +27,9 @@ public class Sensor implements Serializable {
             Type type, 
             GraphType representation, 
             String description) {
+        if(type == null || representation == null || description == null)
+            throw new InvalidParameterException(
+                    "Todos os campos devem ser preenchidos");
         this.type = type;
         this.representation = representation;
         this.description = description;
@@ -117,18 +121,26 @@ public class Sensor implements Serializable {
     }
 
     public void setType(Type type) {
+        if(type == null) throw new InvalidParameterException(
+                "Tipo de sensor ser preenchido");
         this.type = type;
     }
 
     public void setRepresentation(GraphType representation) {
+        if(representation == null) throw new InvalidParameterException(
+                "Tipo de representação deve ser preenchida");
         this.representation = representation;
     }
 
     public void setDescription(String description) {
+        if(description == null) throw new InvalidParameterException(
+                "Descrição deve ser preenchida");
         this.description = description;
     }
 
     public void setPublicId(String publicId) {
+        if(publicId == null) throw new InvalidParameterException(
+                "Identidade publica deve ser preenchida");
         this.publicId = publicId;
     }
 

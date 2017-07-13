@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<%@page import="com.github.amigos_de_jesus.extend.controller.SensorController.MensageType"%>
 <%@page import="java.util.List"%>
 <%@page import="com.github.amigos_de_jesus.extend.model.Sensor"%>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Extend</title>
@@ -9,6 +10,13 @@
 <body>
     <jsp:include page="../../partials/header/header.jsp"/>
     <br/><br/>
+    <%  String msg = (String) request.getAttribute("msg");
+        if(msg != null){ 
+            String msgType = ((MensageType) request.getAttribute("msg_type"))
+                    .representation();
+    %>
+    <div class="alert alert-<%= msgType %>"><%= msg %></div>
+    <% } %>
         <div class="container-fluid">
             <div class="row">
                 <%
