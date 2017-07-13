@@ -18,8 +18,8 @@
 <div class="barra">
   <nav>
     <script>
-      if(document.location.href == "http://localhost:9090/extend/pages/home/home.jsp?") {
-        document.write("<a href=\"\/extend\/pages\/cadastro\/cadastro.jsp\">");
+      if(document.location.href.toString().indexOf("/home/home") !== -1) {
+        document.write("<a href=\"\/extend\/pages\/cadastro\/cadastro\">");
         document.write(" <div class=\"link\">");
         document.write("  <span class=\"glyphicon\">&#x2b;<\/span>");
         document.write("    Add");
@@ -32,8 +32,8 @@
         document.write(" <\/div>");
         document.write("<\/a>");
       }
-      else if(document.location.href == "http://localhost:9090/extend/pages/cadastro/cadastro.jsp") {
-        document.write("<a href=\"\/extend\/pages\/home\/home.jsp?\">");
+      else if(document.location.href.toString().indexOf("/cadastro/cadastro") !== -1) {
+        document.write("<a href=\"\/extend\/pages\/home\/home\">");
         document.write(" <div class=\"link\">");
         document.write("  <span class=\"glyphicon\"><\/span>");
         document.write("    Home");
